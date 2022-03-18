@@ -32,10 +32,20 @@ public class Main {
             String valor = entry.getValue();
             if (chave.equals("ZORO")) {
 				System.out.println("\nChave: "+ chave + " Valor: " +valor);
-			} else {
-
 			}
+           
         }
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+            String chave = entry.getKey();
+            String valor = entry.getValue();
+            if (chave.equals("MG")) {
+				System.out.println("\nChave: "+ chave + " Valor: " +valor);
+			}else {
+				System.out.println("Chave MG não existe");
+			}
+           
+        }
+		
 		
 		
 		
