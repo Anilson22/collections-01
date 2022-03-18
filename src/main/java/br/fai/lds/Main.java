@@ -1,6 +1,7 @@
 package br.fai.lds;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Main {
@@ -25,6 +26,19 @@ public class Main {
             String valor = entry.getValue();
             System.out.println(String.format("chave: %s | valor: %s", chave, valor));
         }
+		
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+            String chave = entry.getKey();
+            String valor = entry.getValue();
+            if (chave.equals("ZORO")) {
+				System.out.println("\nChave: "+ chave + " Valor: " +valor);
+			} else {
+
+			}
+        }
+		
+		
+		
 		
 		
 	}
