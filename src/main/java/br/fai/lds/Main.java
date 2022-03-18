@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import javax.swing.JOptionPane;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -43,8 +45,23 @@ public class Main {
 			}else {
 				System.out.println("Chave MG não existe");
 			}
-           
+            
         }
+		
+		 try {
+         	map.put("SRS", "Santa Rita");
+         	System.out.println("\nChave SRS Alterada Com Sucesso");
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, "Erro ao alterar valor da chave");
+			}
+        finally {
+			System.out.println("");
+		}
+		
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+            String chave = entry.getKey();
+            String valor = entry.getValue();
+            System.out.println(String.format("chave: %s | valor: %s", chave, valor));
 		
 		
 		
@@ -52,9 +69,6 @@ public class Main {
 		
 		
 	}
-	
-	private static void print(Map<String, String> item) {
-		
-		
+		System.out.println("\nFim !!!");
 	}
 }
